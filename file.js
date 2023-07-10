@@ -41,7 +41,7 @@ fs.writeFile(
 
     fs.rename(
       path.join(__dirname, "files", "write.txt"),
-      "rename.txt",
+      path.join(__dirname, "files", "rename.txt"),
       (err) => {
         if (err) throw err;
         console.log("Rename op");
