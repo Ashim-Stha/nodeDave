@@ -10,7 +10,7 @@ const readFile = async () => {
     );
     console.log(data);
 
-    await fsPromise.unlink(path.join(__dirname, "promises", "promise.txt")); //deletesfile
+    await fsPromise.unlink(path.join(__dirname, "promises", "promise.txt")); //delete file
 
     await fsPromise.writeFile(
       path.join(__dirname, "promises", "promiseWrite.txt"),
