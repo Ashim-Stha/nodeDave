@@ -1,0 +1,16 @@
+{
+  "name": "nodedave",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dir.js",
+  "scripts": {
+    "start": "node date-fns",
+    "dev":"nodemon date-fns",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^2.30.0"
+  }
+}
