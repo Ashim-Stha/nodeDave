@@ -8,11 +8,11 @@ class MyEmitter extends EventEmiiter {}
 const myEmitter = new MyEmitter();
 
 //add listener for the log event
-myEmitter.on("log", (msg) => {
+myEmitter.on("logg", (msg) => {
   logEvents(msg);
 });
 
 setTimeout(() => {
   //emit event
-  myEmitter.emit("log", "Log event emitted");
+  myEmitter.emit("logg", "Log event emitted");
 }, 2000);
