@@ -3,6 +3,7 @@ const app = express();
 
 const path = require("path");
 const { logger } = require("./middleware/logevents");
+const cors = require("cors");
 const port = process.env.PORT || 3500;
 
 //app.use is used for all routes
@@ -18,6 +19,9 @@ app.use(express.static(path.join(__dirname, "/public")));
 
 //custom middleware logger
 app.use(logger);
+
+//cors=cross origin resource sharing
+app.use(cors());
 
 app.get("^/$|/index(.html)?", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "index.html"));
