@@ -15,3 +15,7 @@
 2023-07-13	09:41:32	956b89b8-70d9-4b1b-89cb-991a4b19457b	/new-page.html	GET
 2023-07-13	09:41:32	0b54e4e5-0427-496a-9468-ab8cc5342e42	TypeError:fsPromises.readFil is not a function
 2023-07-13	09:41:47	eb64aa3b-f599-48c5-ad23-86e405996767	/data/data.txt	GET
+2023-07-13	21:49:00	964ee8e8-cf96-4600-b1db-802e97916de1	GET	undefined	/
+2023-07-13	21:52:15	1f30e259-2d8b-4907-91c4-2db18fd36aa7	GET	undefined	/
+2023-07-13	21:52:58	a04cc978-d621-4f2f-98ad-bc14f484dc5c	OPTIONS	https://www.google.com	/
+2023-07-13	21:52:58	57811d90-b74c-4e3f-9bb8-76ee64137492	GET	https://www.google.com	/
