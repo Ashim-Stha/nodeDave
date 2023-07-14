@@ -13,6 +13,7 @@ app.use("/subdir", express.static(path.join(__dirname, "/public")));
 
 app.use("/", require("./routes/root"));
 app.use("/subdir", router);
+app.use("/employees", require("./routes/api/employee"));
 
 app.all("*", (req, res) => {
   res.status(404);
