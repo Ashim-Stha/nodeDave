@@ -26,7 +26,7 @@ const handleLogin = async (req, res) => {
     });
   } else {
     res.status(401).json({
-      message: "Not authorized",
+      message: "Wrong Password",
     });
   }
 };
