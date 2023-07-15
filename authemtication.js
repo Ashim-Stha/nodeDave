@@ -1,9 +1,13 @@
 const express = require("express");
 const app = express();
+const path = require("path");
+const verifyJWT = require("./middleware/verifyJWT");
 
 app.use(express.json());
 
 app.use("/auth", require("./routes/auth"));
+app.use(verifyJWT);
+app.use("/employees", require("./routes/api/employee"));
 app.use("/register", require("./routes/register"));
 
 app.all("*", (req, res) => {
