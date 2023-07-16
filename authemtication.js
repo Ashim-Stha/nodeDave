@@ -21,8 +21,8 @@ app.use("/logout", require("./routes/logoutRoute"));
 
 app.use("/register", require("./routes/register"));
 
-app.use(verifyJWT);
-app.use("/employees", require("./routes/api/employee"));
+// app.use("/employees", require("./routes/api/employee"));
+// app.use(verifyJWT);
 
 app.all("*", (req, res) => {
   res.status(404);

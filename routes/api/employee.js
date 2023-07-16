@@ -42,7 +42,7 @@ const {
   getEmployee,
   getEmployees,
   deleteEmployees,
-} = require("../../controllers/employeesController");
+} = require("../../controllersDB/employeesControllerDB");
 
 const ROLES_LIST = require("../../config/rolesList");
 const verifyRoles = require("../../middleware/verifyRoles");
