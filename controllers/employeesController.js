@@ -85,8 +85,6 @@ const getEmployee = (req, res) => {
   res.json(findArray);
 };
 
-console.log(data);
-
 module.exports = {
   createEmployees,
   updateEmployees,

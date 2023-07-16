@@ -1,8 +1,14 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const path = require("path");
 const verifyJWT = require("./middleware/verifyJWT");
 const cookieParser = require("cookie-parser");
+const mongoose = require("mongoose");
+const connectDB = require("./config/dbConn");
+
+//connect to DB
+connectDB();
 
 app.use(express.json());
 
@@ -35,6 +41,9 @@ app.use((err, req, res) => {
   res.status(500).send(err.message);
 });
 
-app.listen(3500, () => {
-  console.log("Server running on 3500");
+mongoose.connection.once("open", () => {
+  console.log("Connected to mongoDB");
+  app.listen(3500, () => {
+    console.log("Server running on 3500");
+  });
 });
