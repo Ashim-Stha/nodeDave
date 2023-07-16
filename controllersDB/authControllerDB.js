@@ -1,6 +1,6 @@
 const User = require("../model/User");
 const bcrypt = require("bcrypt");
-const jwt = require("jwt");
+const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 const handleLogin = async (req, res) => {
@@ -46,12 +46,18 @@ const handleLogin = async (req, res) => {
     const result = await findUser.save();
     console.log(result);
 
+    // res.cookie("jwt", refreshToken, {
+    //   httpOnly: true,
+    //   sameSite: "None",
+    //   secure: "true",
+    //   maxAge: 60 * 24 * 24 * 1000,
+    // });
     res.cookie("jwt", refreshToken, {
       httpOnly: true,
       sameSite: "None",
-      secure: "true",
       maxAge: 60 * 24 * 24 * 1000,
     });
+    //we are removing secure option so that we can test in dev environment like thunder client
 
     res.json({
       accessToken,
